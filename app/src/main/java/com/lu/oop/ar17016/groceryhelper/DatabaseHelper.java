@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -59,8 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL1, name);
         contentValues.put(COL2, quantity);
         long result =  db.update(TABLE_NAME, contentValues, "ID = "+id.toString(), null);
-
-        Log.i("Edit", String.valueOf(result));
 
         return result > 0;
     }

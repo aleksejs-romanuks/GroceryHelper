@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dlQuantity.setAdapter(adapter);
 
+        // setting add button onclick:
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // setting view button onclick:
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

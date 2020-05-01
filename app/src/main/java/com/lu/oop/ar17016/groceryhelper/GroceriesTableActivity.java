@@ -25,6 +25,7 @@ public class GroceriesTableActivity extends AppCompatActivity {
 
         myDB = new DatabaseHelper(this);
 
+        // displays the list of items:
         final TableLayout tableLayout = findViewById(R.id.GroceryList);
 
         Cursor data = myDB.getListContents();
@@ -41,10 +42,10 @@ public class GroceriesTableActivity extends AppCompatActivity {
 
                 TableRow row = item.getRaw(this);
 
+                // setting onclick per each row:
                 row.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        System.out.println("Row clicked: " + v.getId());
                         Intent intent = new Intent(GroceriesTableActivity.this, GroceryItemActivity.class);
                         intent.putExtra("id", v.getId());
                         startActivity(intent);
